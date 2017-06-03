@@ -33,9 +33,10 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.status1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.status1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label = new System.Windows.Forms.Label();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,12 @@
             this.statusToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.statusToolStripMenuItem.Text = "Status";
             // 
+            // status1ToolStripMenuItem
+            // 
+            this.status1ToolStripMenuItem.Name = "status1ToolStripMenuItem";
+            this.status1ToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.status1ToolStripMenuItem.Text = "status1";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -76,23 +83,35 @@
             this.exitToolStripMenuItem.Text = "Exit(&X)";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // status1ToolStripMenuItem
+            // label
             // 
-            this.status1ToolStripMenuItem.Name = "status1ToolStripMenuItem";
-            this.status1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.status1ToolStripMenuItem.Text = "status1";
+            this.label.AutoSize = true;
+            this.label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label.Location = new System.Drawing.Point(0, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(98, 18);
+            this.label.TabIndex = 1;
+            this.label.Text = "MyGameStatus";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(184, 36);
+            this.Controls.Add(this.label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "my game status";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,6 +123,7 @@
         private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem status1ToolStripMenuItem;
+        private System.Windows.Forms.Label label;
     }
 }
 

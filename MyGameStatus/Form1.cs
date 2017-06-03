@@ -26,9 +26,11 @@ namespace MyGameStatus
             // 自身のプロセスを取得する
             hProcess = Process.GetCurrentProcess();
             processName = hProcess.ProcessName;
-            Visible = false;
+            //Visible = false;
             // プロセス名を設定
             statusToolStripMenuItem.Text = processName;
+            Text = processName;
+            label.Text = processName;
 
         }
 
@@ -82,5 +84,6 @@ namespace MyGameStatus
 
             this.Close();
         }
+
     }
 }
